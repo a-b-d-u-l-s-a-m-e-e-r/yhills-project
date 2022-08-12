@@ -1,0 +1,1625 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+#bg {
+    position: relative;
+    overflow-x: hidden;
+    user-select: none;
+    overflow-y: hidden;
+}
+
+#ovrpge {
+    position: relative;
+    background-color: black;
+}
+
+/*     
+body::-webkit-scrollbar{
+    display: none;
+} */
+#top-fix {
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    z-index: 9;
+}
+
+#top-fix #im {
+    position: absolute;
+    left: 2%;
+    color: #F29283;
+    z-index: 9;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: 10px;
+    letter-spacing: 10px;
+    border-bottom: 3px solid #F29283;
+    border-left: 3px solid #F29283;
+    font-family: voyage;
+}
+
+#top-fix #kart {
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M4 6.414L.757 3.172l1.415-1.415L5.414 5h15.242a1 1 0 0 1 .958 1.287l-2.4 8a1 1 0 0 1-.958.713H6v2h11v2H5a1 1 0 0 1-1-1V6.414zM6 7v6h11.512l1.8-6H6zm-.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm12 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    height: 5vh;
+    width: 2vw;
+    background-color: transparent;
+    border-radius: 10%;
+    right: 19.5vw;
+    top: 5.5vh;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    border: none;
+}
+#top-fix #sl{
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M4 22a8 8 0 1 1 16 0h-2a6 6 0 1 0-12 0H4zm8-9c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+    height: 5vh;
+    width: 1.9vw;
+    background-color: transparent;
+    right: 25vw;
+    top: 3vh;
+    border: none;
+    cursor: pointer;
+}
+#top-fix #sr{
+    position: absolute;
+    height: 4.7vh;
+    width: 1.9vw;
+    background-color: transparent;
+    border: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    right: 29vw;
+    top: 3vh;
+    cursor: pointer;
+}
+#top-fix #srch{
+    position: absolute;
+    height: 6vh;
+    width: 40vw;
+    top: 2.5vh;
+    left: 25vw;
+    padding-left: 0.5vw;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 5px;
+    visibility: hidden;
+    background-color: black;
+    color: aliceblue;
+    border: 2px solid #F29283;
+    
+}
+#top-fix #abt{
+    position: absolute;
+    font-size: 30px;
+    color: black;
+    right: 13vw;
+    top: 3vh;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: voyage;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#top-fix #cnt{
+    position: absolute;
+    font-size: 30px;
+    color: black;
+    right: 5vw;
+    top: 3vh;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: voyage;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#top-fix #bcg{
+    position: absolute;
+    height: 6vh;
+    width: 28vw;
+    background-color: #F29283;
+    right: 3.6vw;
+    top: 2.5vh;
+    border: 2px solid aliceblue;
+}
+#sgn {
+    position: absolute;
+    right: 23.5vw;
+    top: 10vh;
+    height: 3vh;
+    width: 4vw;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: aliceblue;
+    font-weight: 900;
+    font-family: gilroy;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #F29283;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#lgn {
+    position: absolute;
+    right: 23.5vw;
+    top: 14vh;
+    height: 3vh;
+    width: 4vw;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: aliceblue;
+    font-weight: 900;
+    font-family: gilroy;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    text-decoration-color: #F29283;
+    text-decoration-thickness: 1px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#formm #sform {
+    position: fixed;
+    height: 75vh;
+    width: 35vw;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background-image: url(https://images.unsplash.com/photo-1603400521630-9f2de124b33b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    border-radius: 2%;
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+    user-select: none;
+    z-index: 9;
+    visibility: hidden;
+}
+
+#sform:hover {
+    border: 3px solid rgba(255, 0, 0, 0.565);
+}
+
+#sform #fname {
+    position: absolute;
+    top: 40px;
+    font-size: 20px;
+    height: 5%;
+    width: 100%;
+}
+
+#fname #fnamm {
+    text-transform: capitalize;
+    color: black;
+    margin: 10px;
+    top: 5%;
+}
+
+#fname #fnam {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    right: 12%;
+    padding-left: 2%;
+}
+
+#sform #lname {
+    position: absolute;
+    top: 100px;
+    font-size: 20px;
+    height: 5%;
+    width: 100%;
+}
+
+#lname #lnam {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    right: 12%;
+    padding-left: 2%;
+}
+
+
+#sform #mnum {
+    position: absolute;
+    top: 160px;
+    font-size: 20px;
+    height: 5%;
+    width: 100%;
+}
+
+#mnum #mnumbb {
+    text-transform: capitalize;
+    color: black;
+    margin: 10px;
+    top: 5%;
+}
+
+#mnum #mnumb {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    right: 12%;
+    padding-left: 2%;
+}
+
+#sform #mail {
+    position: absolute;
+    top: 220px;
+    font-size: 20px;
+    height: 5%;
+    width: 100%;
+}
+
+#mail #smail {
+    text-transform: capitalize;
+    color: black;
+    margin: 10px;
+    top: 5%;
+}
+
+#mail #smaill {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    right: 12%;
+    padding-left: 2%;
+}
+
+#sform #pwd {
+    position: absolute;
+    top: 280px;
+    font-size: 20px;
+    height: 5%;
+    width: 100%;
+}
+
+#pwd #pswd {
+    text-transform: capitalize;
+    color: black;
+    margin: 10px;
+    top: 5%;
+}
+
+#pwd #pswdd {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    right: 12%;
+    padding-left: 2%;
+}
+
+#sform #sub #subm {
+    position: absolute;
+    cursor: pointer;
+    top: 60%;
+    left: 65%;
+    height: 7%;
+    width: 15%;
+    font-size: 20px;
+    background-image: linear-gradient(to bottom right, rgb(19, 254, 19), green, rgb(1, 40, 1));
+    border: none;
+    border-radius: 10%;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+#sform #sub #rest {
+    position: absolute;
+    cursor: pointer;
+    top: 60%;
+    left: 30%;
+    height: 7%;
+    width: 15%;
+    font-size: 20px;
+    background-image: linear-gradient(to bottom right, rgb(248, 70, 70), red, rgb(62, 2, 2));
+    border: none;
+    border-radius: 10%;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+#sform #aur {
+    position: absolute;
+    height: 20%;
+    width: 80%;
+    left: 10%;
+    top: 62%;
+    color: aliceblue;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#sform #aur #l1 {
+    height: 1%;
+    width: 100%;
+    background-color: grey;
+    margin: 2%;
+}
+
+#sform #aur #l2 {
+    height: 1%;
+    width: 100%;
+    margin: 2%;
+    background-color: grey;
+}
+
+#sform #sw {
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    top: 77%;
+    text-transform: capitalize;
+    left: 36%;
+    font-weight: 500;
+    font-family: gilroy;
+    text-decoration: underline;
+}
+
+#swg {
+    height: 10%;
+    width: 35%;
+    position: absolute;
+    bottom: 22px;
+    left: 30px;
+    border-radius: 5%;
+    border: none;
+    cursor: pointer;
+    background-image: url(https://dreambigcreative.net/wp-content/uploads/2020/06/Google-New-Logo-2015.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#fwg {
+    height: 10%;
+    width: 35%;
+    position: absolute;
+    bottom: 22px;
+    right: 30px;
+    border-radius: 5%;
+    border: none;
+    cursor: pointer;
+    background-image: url(https://t3.ftcdn.net/jpg/04/32/86/42/360_F_432864205_aaLreq5kBDWUqDqgczdEM0aVP1bXCTTc.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#sform #crs #crsbtn {
+    position: absolute;
+    height: 5%;
+    width: 6%;
+    right: 8px;
+    top: 6px;
+    cursor: pointer;
+    background-color: rgba(255, 21, 0, 0.697);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='36' height='36'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+    border: none;
+}
+
+#formm #lform {
+    position: fixed;
+    height: 60vh;
+    width: 35vw;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background-image: url(https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    border-radius: 2%;
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+    user-select: none;
+    z-index: 9;
+    visibility: hidden;
+}
+
+#lform:hover {
+    border: 3px solid rgba(0, 255, 60, 0.565);
+}
+
+#lform #emal {
+    position: absolute;
+    top: 60px;
+    font-size: 20px;
+    height: 5%;
+    width: 100%;
+}
+
+#emal #mailel {
+    text-transform: capitalize;
+    color: white;
+
+    margin: 10px;
+    top: 5%;
+}
+
+#emal #maile {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    right: 12%;
+    padding-left: 2%;
+    text-transform: capitalize;
+}
+
+#lform #pas {
+    position: absolute;
+    top: 130px;
+    font-size: 20px;
+    height: 5%;
+    width: 100%;
+}
+
+#pas #pssw {
+    text-transform: capitalize;
+    color: white;
+    margin: 10px;
+
+    top: 5%;
+}
+
+#pas #pss {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    right: 12%;
+    padding-left: 2%;
+    text-transform: capitalize;
+}
+
+#lform #auri {
+    position: absolute;
+    height: 20%;
+    width: 80%;
+    left: 52px;
+    top: 215px;
+    color: aliceblue;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#lform #auri #l1i {
+    height: 1%;
+    width: 100%;
+    background-color: grey;
+    margin: 2%;
+}
+
+#lform #auri #l2i {
+    height: 1%;
+    width: 100%;
+    margin: 2%;
+    background-color: grey;
+}
+
+#lform #swi {
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    top: 280px;
+    text-transform: capitalize;
+    left: 32%;
+    font-weight: 500;
+    font-family: gilroy;
+    text-decoration: underline;
+}
+
+#swgi {
+    height: 10%;
+    width: 35%;
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+    border-radius: 5%;
+    border: none;
+    cursor: pointer;
+    background-image: url(https://dreambigcreative.net/wp-content/uploads/2020/06/Google-New-Logo-2015.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#fwgi {
+    height: 10%;
+    width: 35%;
+    position: absolute;
+    bottom: 60px;
+    right: 30px;
+    border-radius: 5%;
+    border: none;
+    cursor: pointer;
+    background-image: url(https://t3.ftcdn.net/jpg/04/32/86/42/360_F_432864205_aaLreq5kBDWUqDqgczdEM0aVP1bXCTTc.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#lform #crsi #crsbtni {
+    position: absolute;
+    height: 7%;
+    width: 6%;
+    right: 8px;
+    top: 6px;
+    cursor: pointer;
+    background-color: rgba(255, 21, 0, 0.564);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='36' height='36'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+    border: none;
+}
+
+#lform #log #logm {
+    position: absolute;
+    cursor: pointer;
+    top: 42%;
+    left: 43%;
+    height: 7%;
+    width: 15%;
+    font-size: 20px;
+    background-image: linear-gradient(to bottom right, rgb(19, 254, 19), green, rgb(1, 40, 1));
+    border: none;
+    border-radius: 10%;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+
+.main {
+    position: relative;
+    height: 150vh;
+    width: 100vw;
+    background-color: black;
+}
+.main #cmt1{
+    position: absolute;
+    height: 35vh;
+    width: 25vw;
+    right: 18vw;
+    top: 23vh;
+    border: none;
+    background-image: url(https://images.unsplash.com/photo-1657054639025-a8ffd52bfc50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1043&q=80);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.main #cmt1 h1{
+    position: absolute;
+    font-size: 40px;
+    color: aliceblue;
+    letter-spacing: 25px;
+    font-family: voyage;
+    top: 25vh;
+    left: 1vw;
+}
+.main #card1 {
+    position: absolute;
+    height: 70vh;
+    width: 50vw;
+    background-color: rgb(226, 104, 16);
+    top: 22vh;
+    left: 15vw;
+    background-image: url(https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-position: center;
+    background-size: cover;
+}
+
+.main #card2 {
+    position: absolute;
+    height: 70vh;
+    width: 10vw;
+    background-color: wheat;
+    top: 22vh;
+    left: 15vw;
+    background-color: aqua;
+    mix-blend-mode: color-burn;
+}
+
+.main #hl {
+    position: absolute;
+    font-size: 40px;
+    color: aliceblue;
+    right: 15%;
+    bottom: 45%;
+    text-transform: capitalize;
+    z-index: 7;
+}
+.main h2{
+    color: aliceblue;
+    font-size: 80px;
+    position: absolute;
+    left: -5%;
+    top: 30%;
+    transform: rotate(90deg);
+    letter-spacing: 10px;
+    text-transform: capitalize;
+}
+.main h3{
+    color: aliceblue;
+    font-size: 55px;
+    position: absolute;
+    left: 2vw;
+    top: 125vh;
+    z-index: 7;
+    text-decoration: line-through;
+    text-decoration-color: #F29283;
+    text-decoration-thickness: 2px;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-family: voyage;
+    transform: rotate(-90deg);
+}
+.main h4{
+    color:  aliceblue;
+    position: absolute;
+    font-size: 25px;
+    top: 120vh;
+    left: 15vw;
+    text-align: center;
+    height: 40vh;
+    width: 80vw;
+    font-family: voyage;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+}
+.main #ctc{
+    position: absolute;
+    height: 20vh;
+    width: 9vw;
+    right: 3.8vw;
+    top: 9vh;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    background-color: rgb(94, 119, 142);
+    visibility: hidden;
+}
+.main #ctc #ins{
+    position: absolute;
+    height: 5vh;
+    width: 2.8vw;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    border: none;
+    top: 4vh;
+    left: 1.2vw;
+    background-color: transparent;
+    cursor: pointer;
+}
+.main #ctc #fcb{
+    position: absolute;
+    height: 5vh;
+    width: 2.8vw;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    border: none;
+    top: 4vh;
+    right: 1.2vw;
+    background-color: transparent;
+    cursor: pointer;
+}
+.main #ctc #wts{
+    position: absolute;
+    height: 5vh;
+    width: 2.8vw;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M2.004 22l1.352-4.968A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.954 9.954 0 0 1-5.03-1.355L2.004 22zM8.391 7.308a.961.961 0 0 0-.371.1 1.293 1.293 0 0 0-.294.228c-.12.113-.188.211-.261.306A2.729 2.729 0 0 0 6.9 9.62c.002.49.13.967.33 1.413.409.902 1.082 1.857 1.971 2.742.214.213.423.427.648.626a9.448 9.448 0 0 0 3.84 2.046l.569.087c.185.01.37-.004.556-.013a1.99 1.99 0 0 0 .833-.231c.166-.088.244-.132.383-.22 0 0 .043-.028.125-.09.135-.1.218-.171.33-.288.083-.086.155-.187.21-.302.078-.163.156-.474.188-.733.024-.198.017-.306.014-.373-.004-.107-.093-.218-.19-.265l-.582-.261s-.87-.379-1.401-.621a.498.498 0 0 0-.177-.041.482.482 0 0 0-.378.127v-.002c-.005 0-.072.057-.795.933a.35.35 0 0 1-.368.13 1.416 1.416 0 0 1-.191-.066c-.124-.052-.167-.072-.252-.109l-.005-.002a6.01 6.01 0 0 1-1.57-1c-.126-.11-.243-.23-.363-.346a6.296 6.296 0 0 1-1.02-1.268l-.059-.095a.923.923 0 0 1-.102-.205c-.038-.147.061-.265.061-.265s.243-.266.356-.41a4.38 4.38 0 0 0 .263-.373c.118-.19.155-.385.093-.536-.28-.684-.57-1.365-.868-2.041-.059-.134-.234-.23-.393-.249-.054-.006-.108-.012-.162-.016a3.385 3.385 0 0 0-.403.004z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    border: none;
+    top: 13vh;
+    left: 1.2vw;
+    background-color: transparent;
+    cursor: pointer;
+}
+.main #ctc #loc{
+    position: absolute;
+    height: 5vh;
+    width: 2vw;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 20.9l4.95-4.95a7 7 0 1 0-9.9 0L12 20.9zm0 2.828l-6.364-6.364a9 9 0 1 1 12.728 0L12 23.728zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    border: none;
+    top: 13vh;
+    right: 1.4vw;
+    background-color: transparent;
+    cursor: pointer;
+}
+.main h5{
+    position: absolute;
+    font-size: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #F29283;
+    text-decoration-thickness: 1px;
+    color: aliceblue;
+    right: 13.4vw;
+    top: 9vh;
+    visibility: hidden;
+}
+#ovrpge1 {
+    position: relative;
+    background-color: black;
+}
+
+.maind {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.maind #text h1 {
+    position: absolute;
+    right: 12%;
+    top: 53%;
+    font-size: 40px;
+    color: aliceblue;
+    text-transform: capitalize;
+    text-align: right;
+    font-family: 'Yellowtail', cursive;
+    z-index: 7;
+    border-top: 1px solid white;
+
+}
+
+.maind #text h2 {
+    position: absolute;
+    right: 5%;
+    top: 65%;
+    font-size: 40px;
+    color: aliceblue;
+    text-transform: capitalize;
+    text-align: right;
+    font-family: 'Yellowtail', cursive;
+    z-index: 7;
+    border-bottom: 1px solid white;
+
+}
+
+.maind #text img {
+    position: absolute;
+    right: 0;
+    top: 27%;
+    height: 60%;
+    width: 35%;
+    z-index: 7;
+}
+
+.maind #slide {
+    position: absolute;
+    height: 70%;
+    width: 50%;
+    top: 20%;
+    left: 10%;
+    background-color: aliceblue;
+    z-index: 7;
+    overflow: hidden;
+    border-radius: 5%;
+    border: none;
+    object-fit: cover;
+    object-position: center;
+}
+
+.maind #slide #img1 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.maind #slide #txt {
+    position: absolute;
+    font-size: 50px;
+    left: 10px;
+    bottom: 10px;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px rgb(165, 5, 5);
+    color: aliceblue;
+    text-transform: capitalize;
+    font-family: voyage;
+}
+
+.maind #slide #txtt {
+    width: 100%;
+    position: absolute;
+    font-size: 50px;
+    bottom: 0;
+    left: 0;
+    font-family: voyage;
+    text-transform: capitalize;
+    color: aliceblue;
+    text-align: center;
+    font-weight: 900;
+    z-index: 7;
+    line-height: 70px;
+    text-decoration: underline;
+}
+
+.maind #slide #imgg #img1 {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+.maind #slide #line {
+    position: absolute;
+    width: 3px;
+    height: 25%;
+    transform: rotate(45deg);
+    background-color: rgb(179, 147, 29);
+    bottom: -20px;
+    right: 4%;
+    z-index: 7;
+}
+
+.maind #slide #line1 {
+    position: absolute;
+    width: 3px;
+    height: 25%;
+    transform: rotate(45deg);
+    background-color: rgb(119, 171, 40);
+    bottom: -30px;
+    right: 3%;
+    z-index: 7;
+}
+#maind1 #cdm{
+    position: absolute;
+    background-image: url(https://i.pinimg.com/originals/2b/1d/36/2b1d365fb2716fbeeb3b1b43403349db.jpg);
+    height: 50vh;
+    width: 40vw;
+    left: 2.5vw;
+    bottom: 65vh;
+    background-position: center;
+    background-size: cover;
+}
+
+#maind1 {
+    position: relative;
+    height: 200vh;
+    width: 100vw;
+    background-color: black;
+    overflow: hidden;
+}
+
+#maind1 #card1 {
+    position: absolute;
+    height: 40vh;
+    width: 15vw;
+    top: 32%;
+    right: 22%;
+    background-image: url(https://i.pinimg.com/564x/5d/b8/15/5db8156e7e50db3a65d9970052753606.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: rotate(-10deg);
+}
+
+#maind1 #card2 {
+    position: absolute;
+    height: 40vh;
+    width: 15vw;
+    top: 40%;
+    right: 12%;
+    background-image: url(https://i.pinimg.com/564x/2d/8a/21/2d8a21ffbf6cb95af41b84124dfe7565.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: rotate(5deg);
+}
+
+#maind1 #card3 {
+    position: absolute;
+    height: 40vh;
+    width: 15vw;
+    top: 20%;
+    right: 25%;
+    background-image: url(https://i.pinimg.com/736x/bb/be/b9/bbbeb951501f568776f440544007700c.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: rotate(15deg);
+}
+
+#maind1 #card4 {
+    position: absolute;
+    height: 40vh;
+    width: 15vw;
+    top: 22%;
+    right: 37%;
+    background-image: url(https://i.pinimg.com/564x/0e/5b/46/0e5b462981a47163c5e1fda15d158e06.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: rotate(5deg);
+}
+
+#maind1 #card5 {
+    position: absolute;
+    height: 40vh;
+    width: 15vw;
+    top: 45%;
+    right: 35%;
+    background-image: url(https://i.pinimg.com/564x/50/a5/54/50a554257adb00e46655517b9a8d62d7.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: rotate(7deg);
+}
+
+#maind1 #card6 {
+    position: absolute;
+    height: 40vh;
+    width: 15vw;
+    top: 22%;
+    right: 10%;
+    background-image: url(https://i.pinimg.com/564x/d1/64/ac/d164ac2bed1bb7f7a7f9cf10c61f87b3.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: rotate(-15deg);
+}
+
+#maind1 #card7 {
+    position: absolute;
+    height: 40vh;
+    width: 15vw;
+    top: 30%;
+    right: 36%;
+    background-image: url(https://i.pinimg.com/564x/ab/18/11/ab1811b55ed8c64e15bbf541e875b628.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: rotate(-15deg);
+}
+
+#maind1 #card8 {
+    position: absolute;
+    height: 40vh;
+    width: 15vw;
+    top: 45%;
+    right: 22%;
+    background-image: url(https://i.pinimg.com/564x/13/4e/e3/134ee3b2da10bb535e9af4bb6bb159ad.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: rotate(-20deg);
+}
+
+#maind1 #text {
+    position: absolute;
+    height: 40vh;
+    width: 30vw;
+    left: 7%;
+    top: 20%;
+}
+
+#maind1 #text #textt {
+    position: absolute;
+    letter-spacing: 5px;
+    left: 18%;
+    font-family: voyage;
+    font-size: 70px;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+#maind1 #text #men {
+    position: absolute;
+    letter-spacing: 5px;
+    left: 15%;
+    top: 35%;
+    font-family: voyage;
+    font-size: 40px;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+#maind1 #text #men:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+#maind1 #text #women {
+    position: absolute;
+    letter-spacing: 5px;
+    left: 8%;
+    top: 60%;
+    font-family: voyage;
+    font-size: 40px;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+#maind1 #text #women:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+#maind2 {
+    position: relative;
+    height: 100vmax;
+    width: 100vmax;
+    background-color: black;
+}
+
+#maind2 .cards {
+    position: absolute;
+    height: 120vh;
+    width: 90vw;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+}
+
+#maind2 .cards #card1 {
+    position: absolute;
+    height: 40vh;
+    width: 17vw;
+    left: 6%;
+    background-image: url(https://images.unsplash.com/photo-1521165946603-4019d13d7d46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 15px 15px aliceblue;
+}
+
+#maind2 .cards #card2 {
+    position: absolute;
+    height: 40vh;
+    width: 17vw;
+    left: 29%;
+    background-image: url(https://images.unsplash.com/photo-1562349502-153e491776bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 15px 15px aliceblue;
+}
+
+#maind2 .cards #card3 {
+    position: absolute;
+    height: 40vh;
+    width: 17vw;
+    left: 52%;
+    background-image: url(https://images.unsplash.com/photo-1485043621645-c983f19e23c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 15px 15px aliceblue;
+}
+
+#maind2 .cards #card4 {
+    position: absolute;
+    height: 40vh;
+    width: 17vw;
+    left: 75%;
+    background-image: url(https://images.unsplash.com/photo-1434510423563-c7e99bbc5bbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 15px 15px aliceblue;
+}
+
+#maind2 .cards #card5 {
+    position: absolute;
+    height: 40vh;
+    width: 17vw;
+    left: 6%;
+    bottom: 2%;
+    background-image: url(https://images.unsplash.com/photo-1536766820879-059fec98ec0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 15px 15px aliceblue;
+}
+
+#maind2 .cards #card6 {
+    position: absolute;
+    height: 40vh;
+    width: 17vw;
+    left: 29%;
+    bottom: 2%;
+    background-image: url(https://images.unsplash.com/photo-1619855502693-e71b70ef4569?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 15px 15px aliceblue;
+}
+
+#maind2 .cards #card7 {
+    position: absolute;
+    height: 40vh;
+    width: 17vw;
+    left: 52%;
+    bottom: 2%;
+    background-image: url(https://images.unsplash.com/photo-1523259427704-2669270877f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=419&q=80);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 15px 15px aliceblue;
+}
+
+#maind2 .cards #card8 {
+    position: absolute;
+    height: 40vh;
+    width: 17vw;
+    left: 75%;
+    bottom: 2%;
+    background-image: url(https://images.unsplash.com/photo-1516386564067-f06afb572168?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 15px 15px aliceblue;
+}
+
+#maind2 #txt {
+    position: absolute;
+    color: aliceblue;
+    font-size: 40px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+#maind2 #text1 {
+    font-size: 40px;
+    position: absolute;
+    top: 60%;
+    left: 21%;
+    letter-spacing: 10px;
+    color: aliceblue;
+    z-index: 9;
+    text-transform: capitalize;
+    font-family: voyage;
+}
+
+#maind2 #vido {
+    position: absolute;
+    height: 60vh;
+    width: 45vw;
+    left: 27%;
+    bottom: 0%;
+}
+#maind2 #stp{
+    position: absolute;
+    background-image: url(https://i.pinimg.com/736x/9f/b2/31/9fb231abd3bfe3bd1422173cb2b4dc81.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 25vh;
+    width: 15vw;
+    right: 17vw;
+    top: 7vh;
+}
+#maind2 #sto{
+    position: absolute;
+    background-image: url(https://i.pinimg.com/736x/9f/b2/31/9fb231abd3bfe3bd1422173cb2b4dc81.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 25vh;
+    width: 15vw;
+    left: 16vw;
+    top: 7vh;
+}
+#maind2 #stl{
+    position: absolute;
+    background-image: url(https://i.pinimg.com/564x/4a/dd/fe/4addfec42b8469dbc19a7f594dab6c3c.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    width: 30vw;
+    bottom: 0;
+    left: -4vw;
+}
+#maind2 #stl1{
+    position: absolute;
+    background-image: url(https://i.pinimg.com/564x/4a/dd/fe/4addfec42b8469dbc19a7f594dab6c3c.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    width: 30vw;
+    bottom: 0;
+    right: -4vw;
+}
+
+#ovrpge1 #maind3 {
+    position: relative;
+    background-color: black;
+    height: 100vmax;
+    width: 100vmax;
+}
+
+#ovrpge1 #maind3 #brands {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 25%;
+    background-color: aliceblue;
+}
+
+#ovrpge1 #maind3 #brands #logo1 {
+    position: absolute;
+    background-image: url(https://cdn.hyprop.co.za/image/2021/7/21/cfb498ba-bf5b-4b3a-b6ba-25409f4ce093/9648a5d6-811c-4400-99ee-f5117b007c66.jpg);
+    height: 20%;
+    width: 20%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo2 {
+    position: absolute;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/68/719/604/logo-nike-famous-sports-brand-dark-background-silver-nike-logo-wallpaper-preview.jpg);
+    height: 20%;
+    width: 20%;
+    left: 20%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo3 {
+    position: absolute;
+    background-image: url(https://lh3.googleusercontent.com/7vGf4m38tYVvYf0WHvqzUOpNqyqBWX6l6O46RV4icbpDGobd6fHtSjQd17y8orRfBLT_kaUUgxvEgL-lpfi_sLz1-g56);
+    height: 20%;
+    width: 20%;
+    left: 40%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo4 {
+    position: absolute;
+    background-image: url(https://userscontent2.emaze.com/images/9b814612-d1bf-4860-8b50-d1202f390347/9b0cd189dc356c55885016cdb5923030.jpg);
+    height: 20%;
+    width: 20%;
+    left: 60%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo5 {
+    position: absolute;
+    background-image: url(https://www.origiin.com/bin2017/wp-content/uploads/2020/05/Van-Heusen.png);
+    height: 20%;
+    width: 20%;
+    left: 80%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo6 {
+    position: absolute;
+    background-image: url(https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/0/AmazonStores/ATVPDKIKX0DER/91a8a990e83392cfc9ef4f3b3567ea81.w3000.h600.jpg);
+    height: 20%;
+    width: 20%;
+    top: 20%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo7 {
+    position: absolute;
+    background-image: url(https://trademarks.justia.com/media/image.php?serial=86982728);
+    height: 20%;
+    width: 20%;
+    top: 20%;
+    left: 20%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo8 {
+    position: absolute;
+    background-image: url(https://i.pinimg.com/originals/a1/d0/73/a1d073c91963fdd4b3d8402fcb8667e9.jpg);
+    height: 20%;
+    width: 20%;
+    top: 20%;
+    left: 40%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo9 {
+    position: absolute;
+    background-image: url(https://i.pinimg.com/736x/a4/e4/ce/a4e4ced702eaf14f79d051855b3a4e03--fashion-logos-branding-design.jpg);
+    height: 20%;
+    width: 20%;
+    top: 20%;
+    left: 60%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo10 {
+    position: absolute;
+    background-image: url(https://fontmeme.com/images/Tag-Heuer-Logo.jpg);
+    height: 20%;
+    width: 20%;
+    top: 20%;
+    left: 80%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo11 {
+    position: absolute;
+    background-image: url(https://images-platform.99static.com//NqBvs-RbaAtkyRKmC67DHNjBsRU=/135x137:864x866/fit-in/500x500/99designs-contests-attachments/115/115725/attachment_115725715);
+    height: 20%;
+    width: 20%;
+    top: 40%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo12 {
+    position: absolute;
+    background-image: url(https://assetscdn1.paytm.com/images/catalog/product/D/DE/DEAVOUCHAGRAMVOUC5983413094CC5F/0x1920/70/0.png);
+    height: 20%;
+    width: 20%;
+    top: 40%;
+    left: 20%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo13 {
+    position: absolute;
+    background-image: url(https://www.jagranengage.com/public/images/caseStudies/titan.jpg);
+    height: 20%;
+    width: 20%;
+    top: 40%;
+    left: 40%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo14 {
+    position: absolute;
+    background-image: url(data:image/png;base64,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);
+    height: 20%;
+    width: 20%;
+    top: 40%;
+    left: 60%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo15 {
+    position: absolute;
+    background-image: url(https://cdn.hyprop.co.za/image/2021/7/21/02aca0c2-4761-4900-a9c2-3d682ac381c1/5c4579cd-d01c-4ed1-8291-5f9f1235b2cd.jpg);
+    height: 20%;
+    width: 20%;
+    top: 40%;
+    left: 80%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo16 {
+    position: absolute;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/projects/404/ca106971717843.Y3JvcCwyMTAzLDE2NDUsMzkwLDc4.png);
+    height: 20%;
+    width: 20%;
+    top: 60%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo17 {
+    position: absolute;
+    background-image: url(https://www.logolynx.com/images/logolynx/5f/5f3dda34f40f0e1be4731bd501b1a885.jpeg);
+    height: 20%;
+    width: 20%;
+    top: 60%;
+    left: 20%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo18 {
+    position: absolute;
+    background-image: url(https://business.mapsofindia.com/top-brands-india/images/CAPRESE.jpg);
+    height: 20%;
+    width: 20%;
+    top: 60%;
+    left: 40%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo19 {
+    position: absolute;
+    background-image: url(https://payload.cargocollective.com/1/1/36544/3125864/rbk_02_800.jpg);
+    height: 20%;
+    width: 20%;
+    top: 60%;
+    left: 60%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo20 {
+    position: absolute;
+    background-image: url(https://i.pinimg.com/originals/b4/5a/92/b45a92ebdc00069da00533f7da7db954.png);
+    height: 20%;
+    width: 20%;
+    top: 60%;
+    left: 80%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo21 {
+    position: absolute;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIGJTK5lzAKBdliXfp4e8IKg0jbwF1iOiB651smcLK5JW4m7c2O2zMsfQt8ch3mQQikmE&usqp=CAU);
+    height: 20%;
+    width: 20%;
+    top: 80%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo22 {
+    position: absolute;
+    background-image: url(https://image3.mouthshut.com/images/imagesp/925740546s.jpg);
+    height: 20%;
+    width: 20%;
+    top: 80%;
+    left: 20%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo23 {
+    position: absolute;
+    background-image: url(data:image/png;base64,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);
+    height: 20%;
+    width: 20%;
+    top: 80%;
+    left: 40%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo24 {
+    position: absolute;
+    background-image: url(https://designbro.com/blog/wp-content/uploads/gucci-logo-history.jpg);
+    height: 20%;
+    width: 20%;
+    top: 80%;
+    left: 60%;
+    background-position: center;
+    background-size: cover;
+}
+
+#ovrpge1 #maind3 #brands #logo25 {
+    position: absolute;
+    background-image: url(https://www.capitaland.com/content/dam/capitaland-sites/singapore/shop/malls/funan/tenants/Under%20Armour%20Logo.png.transform/cap-midres/image.png);
+    height: 20%;
+    width: 20%;
+    top: 80%;
+    left: 80%;
+    background-position: center;
+    background-size: cover;
+}
+#ovrpge1 #maind3 h1{
+    font-size: 70px;
+    position: absolute;
+    color: aliceblue;
+    text-transform: capitalize;
+    top: 18%;
+    left: 32%;
+    font-family: voyage;
+    letter-spacing: 10px;
+}
+#ovrpge1 #maind3 #cvr{
+    position: absolute;
+    height: 50vh;
+    width: 100vw;
+    bottom: 0;
+    z-index: 5;
+    background-color: black;
+}
+#ovrpge1 #maind3 #contact h2{
+    font-size: 50px;
+    position: absolute;
+    bottom: 35vh;
+    color: aliceblue;
+    right: 16vw;
+    text-transform: capitalize;
+    font-family: voyage;
+    text-decoration: underline;
+    text-decoration-color: #F29283;
+    text-decoration-thickness: 2px;
+}
+
+#ovrpge1 #maind3 #about h4{
+    position: absolute;
+    bottom: 35vh;
+    font-size: 50px;
+    color: aliceblue;
+    left: 16vw;
+    text-transform: capitalize;
+    font-family: voyage;
+    text-decoration: underline;
+    text-decoration-color: #F29283;
+    text-decoration-thickness: 2px;  
+}
+#ovrpge1 #maind3 #about h3{
+    position: absolute;
+    bottom: 15vh;
+    font-size: 25px;
+    color: aliceblue;
+    left: 11vw;
+    text-transform: capitalize;
+    font-family: voyage;
+    text-align: center;
+    }
+
+#ovrpge1 #maind3 #contact h5{
+    position: absolute;
+    font-size: 25px;
+    color: aliceblue;
+    font-family: voyage;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    cursor: pointer;
+}    
+#ovrpge1 #maind3 #contact #ins{
+    bottom: 27vh;
+    right: 33vw;
+} 
+#ovrpge1 #maind3 #contact #fcb{
+    bottom: 27vh;
+    right: 23vw;
+}
+#ovrpge1 #maind3 #contact #wht{
+    bottom: 18vh;
+    right: 18vw;
+}
+#ovrpge1 #maind3 #contact #loc{
+    bottom: 18vh;
+    right: 8vw;
+}
+#ovrpge1 #maind3 #tc{
+    position: absolute;
+    font-size: 20px;
+    font-family: voyage;
+    color: aliceblue;
+    bottom: 1.5vh;
+    left: 5vw;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+#ovrpge1 #maind3 #crt{
+    position: absolute;
+    font-size: 20px;
+    font-family: voyage;
+    color: aliceblue;
+    bottom: 1.5vh;
+    left: 38vw;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    text-decoration: underline;
+    text-decoration-color: #F29283;
+    text-decoration-thickness: 1px;
+}
